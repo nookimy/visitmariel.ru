@@ -1,0 +1,103 @@
+.text-normal  (@normal-font-size: 1.6rem; @normal-font-height: 1.25; @normal-font-weight: 700; @normal-font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
+  font-size: @normal-font-size;
+  line-height: @normal-font-height;
+  font-weight: @normal-font-weight;
+  font-family: @normal-font-family;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: @xl-width;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-tilda {
+  width: 320px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media (min-width: 640px) {
+    width: 640px;
+  }
+
+  @media (min-width: 960px) {
+    width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+    padding: 0 20px;
+  }
+}
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+.mp(@list-margin: 0; @list-padding: 0;) {
+  margin: @list-margin;
+  padding: @list-padding;
+}
+
+.list(@list-margin: 0; @list-padding: 0; @list-style: none) {
+  margin: @list-margin;
+  padding: @list-padding;
+  list-style: @list-style;
+}
+
+.list-center(@list-margin: 0 auto; @list-padding: 0; @list-style: none) {
+  margin: @list-margin;
+  padding: @list-padding;
+  list-style: @list-style;
+}
+
+.center-margin(@margin-c: 0 auto;) {
+  margin: @margin-c;
+}
+
+.modal-center(@top: 50%; @top-tr: -50%; @left: 50%) {
+  left: @left;
+  top: @top;
+  transform: translate(-50%, @top-tr);
+}
+
+.retina-bg (@bg-img: ''; @bs-width: auto; @bs-height: auto; @dppx: 2) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: url(@bg-img);
+    background-size: @bs-width @bs-height;
+  }
+}
+
+.retina-bg2 (@bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 3) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: url(@bg-img);
+    background-size: @bs-width @bs-height;
+  }
+}
+
+.btn-reset() {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.block-shadow {
+  background: @light;
+  box-shadow: 0px 4px 20px rgba(196, 196, 196, 0.45);
+}
