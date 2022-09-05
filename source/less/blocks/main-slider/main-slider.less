@@ -1,0 +1,38 @@
+.main-slider {
+  display: flex;
+
+  &__image,
+  &__text {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  &__image {
+
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: @lg-width) {
+      display: block;
+    }
+  }
+
+  &__img-list,
+  &__text-list {
+    width: 100%;
+    max-width: calc(2000px / 2);
+  }
+
+  &__img-list {
+    min-height: 250px;
+    margin-left: auto;
+    background-color: #78C680;
+  }
+
+  &__text-list {
+    min-height: 250px;
+    margin-right: auto;
+  }
+}
