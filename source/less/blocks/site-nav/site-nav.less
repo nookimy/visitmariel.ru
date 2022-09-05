@@ -1,0 +1,19 @@
+.main-header .site-nav {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  .container();
+  background-color: @light;
+  transform: translateY(0);
+  transition: @transition;
+
+  &--opened {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+
+  &__list {
+    .list();
+  }
+}
