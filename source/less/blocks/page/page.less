@@ -1,5 +1,44 @@
 .page {
+  &__section {
+    overflow: hidden;
+    @media (max-width: @mobile-width-only) {
+      font-size: calc(100vw / 320);
+    }
+  }
+
   &__wrap {
     .container();
+    padding-top: 30px;
+  }
+
+  &--index {
+    & .page {
+      &__subtitle {
+        position: relative;
+        .mp();
+        .h2();
+        text-transform: uppercase;
+        margin-bottom: 1em;
+
+        &::before {
+          display: inline-block;
+          content: attr(data-foo);
+          position: absolute;
+          top: -0.13em;
+          left: 0.27em;
+          .large();
+          opacity: 0.05;
+
+          @media (min-width: @md-width) {
+            width: 200vw;
+            top: -4.5rem;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
   }
 }
+
