@@ -4,10 +4,12 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 25em;
+    margin-bottom: 25em;
 
     @media (min-width: @md-width) {
       grid-template-columns: 1fr 1fr;
       gap: 3.5rem;
+      margin-bottom: 5.3rem;
     }
 
     @media (min-width: @lg-width) {
@@ -18,7 +20,7 @@
   &__item {
     width: 100%;
 
-    &:first-child {
+    &--main {
       @media (min-width: @md-width) {
         grid-column-start: 1;
         grid-column-end: -1;
@@ -55,19 +57,6 @@
 
     @media (min-width: @md-width) {
       height: 100%;
-    }
-
-    &:hover {
-      & .event__img-wrap {
-        &::before {
-          height: 100%;
-          background: rgba(@green, 0.6);
-        }
-      }
-
-      & .main-slider__item-title {
-        color: @green;
-      }
     }
   }
 

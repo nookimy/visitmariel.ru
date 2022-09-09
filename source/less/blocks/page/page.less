@@ -1,14 +1,43 @@
 .page {
   &__section {
     overflow: hidden;
+    padding-top: 30em;
+    padding-bottom: 30em;
+
     @media (max-width: @mobile-width-only) {
       font-size: calc(100vw / 320);
+    }
+
+    @media (min-width: @md-width) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
   }
 
   &__wrap {
     .container();
-    padding-top: 30px;
+  }
+
+  &__link-more {
+    .mp();
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: @md-width) {
+      justify-content: flex-end;
+    }
+
+    & a {
+      .text-link();
+      color: @dark-gray;
+      transition: @transition;
+
+      &:hover,
+      &:focus {
+        color: @green;
+        transform: scale(1.05);
+      }
+    }
   }
 
   &--index {
@@ -41,4 +70,8 @@
     }
   }
 }
+
+
+
+
 
