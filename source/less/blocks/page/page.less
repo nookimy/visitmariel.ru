@@ -50,26 +50,27 @@
         margin-bottom: 1em;
 
         &::before {
+          width: 200vw;
           display: inline-block;
           content: attr(data-foo);
           position: absolute;
           top: -0.13em;
-          left: 0.27em;
+          left: 50%;
+          text-align: center;
+          transform: translateX(-50%);
           .large();
           opacity: 0.05;
 
           @media (min-width: @md-width) {
-            width: 200vw;
             top: -4.5rem;
-            left: 50%;
-            text-align: center;
-            transform: translateX(-50%);
           }
         }
       }
     }
   }
 }
+
+
 
 
 

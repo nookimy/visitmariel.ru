@@ -26,12 +26,10 @@
     .mp();
     width: 100%;
     height: 100%;
-    aspect-ratio: 2.5 / 2;
+    aspect-ratio: 2.8 / 2.2;
     object-position: center;
     object-fit: cover;
     transition: 4s;
-
-
   }
 
   &__info {
@@ -68,7 +66,7 @@
 
   &__title {
     .mp();
-    .text-title-big();
+    .text-title();
     transition: @transition;
     z-index: 10;
   }
@@ -113,6 +111,13 @@
 
     @media (min-width: @max-width) {
       aspect-ratio: 2.5 / 2;
+    }
+  }
+
+  & .event {
+
+    &__title {
+      .text-title-big();
     }
   }
   @media (min-width: @md-width) {

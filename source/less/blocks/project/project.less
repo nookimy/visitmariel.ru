@@ -1,0 +1,31 @@
+.projects__list .project {
+  & img {
+    .mp();
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: 4s;
+  }
+
+  &__title {
+    width: 100%;
+    display: inline-block;
+    .mp();
+    .text-title-big();
+    transition: @transition;
+    z-index: 10;
+    color: @light;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 10em;
+  }
+}
+
+.projects__item-wrap {
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
