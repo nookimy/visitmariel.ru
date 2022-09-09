@@ -30,6 +30,8 @@
     object-position: center;
     object-fit: cover;
     transition: 4s;
+
+
   }
 
   &__info {
@@ -74,8 +76,6 @@
 
 .events__item-link {
   &:hover {
-
-
     & .event {
       &__img-wrap {
 
@@ -106,10 +106,21 @@
 }
 
 .events__item--main {
-  & .events__item-link {
-    &:hover {
-      .event__title {
-        color: @dark-gray;
+  &.event img {
+    @media (min-width: @lg-width) {
+      aspect-ratio: 2 / 1;
+    }
+
+    @media (min-width: @max-width) {
+      aspect-ratio: 2.5 / 2;
+    }
+  }
+  @media (min-width: @md-width) {
+    & .events__item-link {
+      &:hover {
+        .event__title {
+          color: @dark-gray;
+        }
       }
     }
   }
