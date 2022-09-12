@@ -4,9 +4,14 @@
   }
   &__list {
     .list();
+    display: flex;
+    flex-direction: column;
+    gap: 20em;
     margin-bottom: 25em;
 
     @media (min-width: @md-width) {
+      flex-direction: row;
+      gap: unset;
       margin-bottom: 5.3rem;
     }
   }

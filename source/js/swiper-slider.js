@@ -23,7 +23,7 @@ function removeClassesSwiper() {
   }
 };
 
-removeClassesSwiper();
+
 
 function checkScreen() {
   if (windowWidth >= 768) {
@@ -55,6 +55,8 @@ function checkScreen() {
     projectsSwiper.destroy(); // или swiper.autoplay.stop();
   }
 };
+
+removeClassesSwiper();
 
 checkScreen();
 
