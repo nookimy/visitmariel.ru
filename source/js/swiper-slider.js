@@ -8,6 +8,34 @@ new Swiper('.main-slider.swiper',{
   slidesPerView: 1,
 });
 
+new Swiper('.team__swiper.swiper',{
+  navigation: {
+    nextEl: '.team__btn-next',
+    prevEl: '.team__btn-prev'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 35,
+    },
+
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 35,
+    },
+  },
+});
+
 
 
 let projectsSwiper;
@@ -29,8 +57,8 @@ function checkScreen() {
   if (windowWidth >= 768) {
     projectsSwiper = new Swiper('.projects__swiper.swiper', {
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.projects__btn-next',
+        prevEl: '.projects__btn-prev'
       },
 
       breakpoints: {

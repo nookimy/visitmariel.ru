@@ -1,0 +1,255 @@
+.app {
+  &__column-wrap {
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @md-width) {
+      position: relative;
+      flex-direction: row;
+    }
+  }
+
+  &__column-content {
+
+    @media (min-width: @md-width) {
+      position: absolute;
+      width: 60%;
+      max-width: 506px;
+      top: 50%;
+      left: 0;
+      z-index: 5;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: @lg-width) {
+      left: 10%;
+    }
+
+    @media (min-width: @max-width) {
+      width: 29.13%;
+      top: 10.16%;
+      left: 12.95%;
+      transform: translateY(0);
+      z-index: 5;
+    }
+  }
+
+  &__column-img {
+    position: relative;
+    width: 125vw;
+    aspect-ratio: 4 / 3.6;
+    left: 50%;
+    transform: translateX(-50%);
+    background:
+      url("../img/app/bg2.png")  no-repeat,
+      url("../img/app/bg1.png")  no-repeat;
+    background-size:
+      74% 68%,
+      55% 66%;
+    background-position:
+      bottom -18% left -132%,
+      top 33% right -72%;
+
+    @media (min-width: @md-width) {
+      width: 100%;
+      max-width: 1737px;
+      aspect-ratio: 1737 / 1027;
+      left: unset;
+      transform: translateX(25%);
+
+      background-size:
+        41.33% 56.86%,
+        30.45% 55.11%;
+      background-position: bottom 5.74% left 10.96%, top 32.35% right -1.43%;
+    }
+
+    @media (min-width: @lg-width) {
+      transform: translateX(25%);
+    }
+    @media (min-width: @xl-width) {
+      transform: translateX(20%);
+    }
+
+    @media (min-width: @max-width) {
+      transform: translateX(5%);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: radial-gradient(52.23% 29.58% at 52.23% 46.57%, rgba(255, 255, 255, 0.6) 0%, #FFFFFF 100%);
+      background-size: contain;
+      z-index: -1;
+    }
+
+    &::before {
+      width: 78%;
+      height: 84%;
+      bottom: -6%;
+      left: -36%;
+
+      @media (min-width: @md-width) {
+        width: 43.64%;
+        height: 70.19%;
+        bottom: 0;
+        left: 6.27%;
+      }
+    }
+
+    &::after {
+      width: 70%;
+      height: 88%;
+      bottom: 2%;
+      right: -32%;
+
+      @media (min-width: @md-width) {
+        width: 37.82%;
+        height: 73.03%;
+        bottom: 12.75%;
+        right: -0.58%;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    object-fit: contain;
+
+    &--route {
+      width: 100%;
+      left: 0;
+      bottom: 9%;
+      opacity: 0.5;
+
+      @media (min-width: @md-width) {
+        width: 55.5%;
+        left: 26.25%;
+        bottom: 18.5%;
+      }
+    }
+
+    &--smrt1 {
+      width: 42%;
+      right: 17%;
+      bottom: 2%;
+
+      @media (min-width: @md-width) {
+        width: 22.91%;
+        right: 26%;
+        bottom: 11%;
+      }
+    }
+
+    &--smrt2 {
+      width: 45%;
+      left: 21%;
+      bottom: 4%;
+
+      @media (min-width: @md-width) {
+        width: 24.23%;
+        left: 37%;
+        bottom: 13%;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 20em;
+    margin-bottom: 2em;
+
+    @media (min-width: @md-width) {
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__logo {
+    width: 60em;
+    height: 60em;
+    .mp();
+    object-fit: contain;
+    object-position: center;
+
+    @media (min-width: @md-width) {
+      width: 12rem;
+      height: 12rem;
+      margin-left: -1.5rem;
+
+    }
+  }
+
+  &__name {
+    .mp();
+    .text-small-caps();
+    letter-spacing: 0.15em;
+
+    @media (min-width: @md-width) {
+      font-size: 2rem;
+    }
+
+    & b {
+      display: block;
+      .h3();
+      font-size: 1.33em;
+      letter-spacing: 0em;
+      margin-top: 0.1em;
+
+      @media (min-width: @md-width) {
+        font-size: 3rem;
+        margin-top: 0.4rem;
+      }
+    }
+  }
+
+  &__about {
+    .mp();
+    .text();
+    margin-bottom: 0.8em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 4.3rem;
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @md-width) {
+      justify-content: flex-start;
+      gap: 2.8rem;
+    }
+
+  }
+
+  &__btn-download {
+    display: block;
+    .btn-reset();
+    width: 130em;
+    height: 38em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5em;
+    overflow: hidden;
+
+    @media (min-width: @md-width) {
+      width: 17rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+    }
+
+    &--ios {
+      background-image: url("../img/app/download-appstore.png");
+    }
+
+    &--android {
+      background-image: url("../img/app/download-googleplay.png");
+    }
+  }
+}
