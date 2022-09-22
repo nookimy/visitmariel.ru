@@ -46,16 +46,34 @@
     .mp();
     display: flex;
     justify-content: center;
+    margin-bottom: 20em;
 
     @media (max-width: @mobile-width-only) {
       font-size: calc(100vw / 320);
     }
 
     @media (min-width: @md-width) {
-      justify-content: flex-end;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: @lg-width) {
+      display: none;
+    }
+
+    & .icon {
+      width: 1.1em;
+      height: 1.1em;
+      transform: rotate(-90deg);
+
+      & use.icon__symbol {
+        fill: @dark-gray;
+      }
     }
 
     & a {
+      display: flex;
+      gap: 1em;
+      align-items: center;
       .text-link();
       color: @dark-gray;
       transition: @transition;
@@ -64,6 +82,12 @@
       &:focus {
         color: @green;
         transform: scale(1.05);
+
+        & .icon {
+          & use.icon__symbol {
+            fill: @green;
+          }
+        }
       }
     }
   }
