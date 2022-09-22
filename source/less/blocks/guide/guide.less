@@ -1,0 +1,79 @@
+.guide {
+  & .page__subtitle {
+    &::before {
+      width: 150vw;
+      text-align: left;
+      line-height: 1.28;
+      top: 0.15em;
+
+      @media (min-width: @md-width) {
+        width: 500vw;
+        text-align: center;
+        line-height: 1.45;
+        top: -4.5rem;
+      }
+    }
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+
+    @media (min-width: @md-width) {
+      top: 40%;
+    }
+
+
+    & .icon {
+      width: 28px;
+      height: 18px;
+
+      & use.icon__symbol {
+        fill: @dark-gray;
+      }
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  & .swiper-button-prev {
+    left: -40px;
+    & .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  & .swiper-button-next {
+    right: -40px;
+  }
+}
+
+.page--index .guide {
+  &__item {
+    display: none;
+
+    &:nth-child(-n+4) {
+      display: block;
+    }
+
+    @media (min-width: @md-width) {
+      &:nth-child(-n+10) {
+        display: block;
+      }
+    }
+  }
+}

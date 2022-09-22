@@ -60,4 +60,17 @@
   }
 }
 
+.guide .articles {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25em;
+
+    @media (min-width: @md-width) {
+      flex-direction: row;
+      gap: unset;
+    }
+  }
+}
+
 
