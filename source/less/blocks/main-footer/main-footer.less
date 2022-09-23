@@ -38,7 +38,7 @@
     }
 
     @media (min-width: @xl-width) {
-      grid-template-columns: 270px 480px 230px;
+      grid-template-columns: 270px 500px 230px;
       grid-template-areas:
         "logo menu right-column"
         "contacts menu right-column"
@@ -70,9 +70,19 @@
       flex-direction: column;
       gap: 3rem;
 
+      & li {
+        & a {
+          color: inherit;
+          text-decoration: none;
+          transition: @transition;
 
+          &:hover,
+          &:focus {
+            color: @green;
+          }
+        }
+      }
     }
-
 
   }
 
