@@ -1,0 +1,46 @@
+.brands {
+  &__text {
+    .mp();
+    .text();
+    margin-bottom: 1.25em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 5.5rem;
+    }
+  }
+
+  &__list {
+    .list();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20em;
+
+    @media (min-width: @md-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+    }
+
+    @media (min-width: @xl-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item-link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+
+
+  }
+
+}
+
+.page--index .brands {
+  &__title {
+    margin-bottom: 0.25em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 0.87rem;
+    }
+  }
+}

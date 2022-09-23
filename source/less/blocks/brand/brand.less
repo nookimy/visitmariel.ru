@@ -1,0 +1,28 @@
+.brands__list .brand {
+  &__title {
+    .h3();
+    text-align: center;
+  }
+
+  &__img-wrap {
+
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 285 / 280;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: 4s;
+  }
+}
+
+.brands__item-link {
+  &:hover,
+  &:focus {
+    & img {
+      transform: scale(1.1);
+    }
+  }
+}
