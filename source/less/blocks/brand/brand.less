@@ -2,6 +2,7 @@
   &__title {
     .h3();
     text-align: center;
+    transition: @transition;
   }
 
   &__img-wrap {
@@ -23,6 +24,10 @@
   &:focus {
     & img {
       transform: scale(1.1);
+    }
+
+    & .brand__title {
+      color: @dark;
     }
   }
 }

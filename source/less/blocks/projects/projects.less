@@ -49,6 +49,7 @@
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60.42%, rgba(0, 0, 0, 0) 100%);
       transition: @transition;
       z-index: 5;
+
     }
 
 
@@ -64,7 +65,7 @@
     &:focus {
       & .projects__item-wrap {
         &::before {
-          background: rgba(@green, 0.0);
+          background: rgba(@green, 0.6);
         }
       }
     }
@@ -108,18 +109,4 @@
   }
 }
 
-.page--index .projects {
-  &__item {
-    display: none;
 
-    &:nth-child(-n+7) {
-      display: block;
-    }
-
-    @media (min-width: @md-width) {
-      &:nth-child(-n+10) {
-        display: block;
-      }
-    }
-  }
-}

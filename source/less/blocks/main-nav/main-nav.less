@@ -3,6 +3,26 @@
   justify-content: space-between;
   align-items: center;
   .container();
-  padding-top: 16px;
-  padding-bottom: 12px;
+  padding-top: 16em;
+  padding-bottom: 12em;
+
+  @media (min-width: @md-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1.6rem;
+    padding-bottom: 1.2rem;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @lg-width) {
+    align-items: flex-start;
+    position: unset;
+    top: unset;
+    left: unset;
+    padding-top: 43px;
+    padding-bottom: 0;
+
+  }
 }

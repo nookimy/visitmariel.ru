@@ -1,5 +1,19 @@
 .main-header {
+  @media (max-width: @mobile-width-only) {
+    font-size: calc(100vw / 320);
+  }
+
+  @media (min-width: @lg-width) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
   &__nav {
     position: relative;
+
+    @media (min-width: @lg-width) {
+      position: unset;
+    }
   }
 }

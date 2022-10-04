@@ -3,9 +3,19 @@
     <h2 class="page__subtitle" data-foo="От первого лица">От первого лица</h2>
     <ul class="articles__list">
       <li class="articles__item articles__item--main article">
-        <a class="articles__item-link" href="#">
+        <a class="articles__item-link" href="#!">
           <div class="article__img-wrap">
-            <img src="./img/first-person/image1.jpg" width="280" height="220">
+            <picture>
+              <source type="image/webp" srcset="
+                    ./img/first-person/image1-1700@1x.webp 1x,
+                    ./img/first-person/image1-1700@2x.webp 2x,
+                    ./img/first-person/image1-1700@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+                    ./img/first-person/image1-1700@1x.jpg 1x,
+                    ./img/first-person/image1-1700@2x.jpg 2x,
+                    ./img/first-person/image1-1700@3x.jpg 3x">
+              <img src="./img/first-person/image1.jpg" alt="Опережая время">
+            </picture>
             <div class="article__info">
               <p class="article__type">Личный блог</p>
               <p class="article__date">22.06.2022</p>
@@ -15,6 +25,6 @@
         </a>
       </li>
     </ul>
-    <p class="page__link-more"><a href="#">Посмотреть всё</a></p>
+    <p class="page__link-more"><a href="#!">Посмотреть всё</a></p>
   </div>
 </section>

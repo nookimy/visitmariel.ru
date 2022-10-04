@@ -14,9 +14,39 @@
         </div>
       </div>
       <div class="app__column-img">
-        <img class="app__img app__img--route" src="./img/app/route.png" width="402" height="186">
-        <img class="app__img app__img--smrt2" src="./img/app/smrt2.png" width="176" height="351">
-        <img class="app__img app__img--smrt1" src="./img/app/smrt1.png" width="166" height="331">
+        <picture>
+          <source type="image/webp" srcset="
+                    ./img/app/route-945@1x.webp 1x,
+                    ./img/app/route-945@2x.webp 2x,
+                    ./img/app/route-945@3x.webp 3x">
+          <source type="image/jpeg" srcset="
+                    ./img/app/route-945@1x.png 1x,
+                    ./img/app/route-945@2x.png 2x,
+                    ./img/app/route-945@3x.png 3x">
+          <img class="app__img app__img--route" src="./img/app/route.png">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="
+                    ./img/app/smrt2-415@1x.webp 1x,
+                    ./img/app/smrt2-415@2x.webp 2x,
+                    ./img/app/smrt2-415@3x.webp 3x">
+          <source type="image/jpeg" srcset="
+                    ./img/app/smrt2-415@1x.png 1x,
+                    ./img/app/smrt2-415@2x.png 2x,
+                    ./img/app/smrt2-415@3x.png 3x">
+          <img class="app__img app__img--smrt2" src="./img/app/smrt2.png">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="
+                    ./img/app/smrt1-390@1x.webp 1x,
+                    ./img/app/smrt1-390@2x.webp 2x,
+                    ./img/app/smrt1-390@3x.webp 3x">
+          <source type="image/jpeg" srcset="
+                    ./img/app/smrt1-390@1x.png 1x,
+                    ./img/app/smrt1-390@2x.png 2x,
+                    ./img/app/smrt1-390@3x.png 3x">
+          <img class="app__img app__img--smrt1" src="./img/app/smrt1.png">
+        </picture>
       </div>
     </div>
 
