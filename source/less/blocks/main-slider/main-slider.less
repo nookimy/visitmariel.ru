@@ -63,7 +63,7 @@
   &__item-title {
     .mp();
     .text-small();
-    font-size: 175em;
+    font-size: 111em;
     margin-top: 0.43em;
     padding-left: 20px;
     padding-right: 20px;
@@ -105,12 +105,14 @@
   & .swiper-pagination-bullets.swiper-pagination-horizontal,
   & .swiper-pagination-custom,
   & .swiper-pagination-fraction {
-    bottom: 400em;
+    bottom: unset;
+    top: 1800em;
 
 
     @media (min-width: @md-width) {
       text-align: right;
       padding-right: 15px;
+      top: unset;
       bottom: 35px;
     }
   }
