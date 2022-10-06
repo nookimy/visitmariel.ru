@@ -1,5 +1,6 @@
 .brands__list .brand {
   &__title {
+    .mp();
     .h3();
     text-align: center;
     transition: @transition;
@@ -16,6 +17,11 @@
     object-fit: contain;
     object-position: center;
     transition: 4s;
+    margin-bottom: 5em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -31,3 +37,5 @@
     }
   }
 }
+
+
