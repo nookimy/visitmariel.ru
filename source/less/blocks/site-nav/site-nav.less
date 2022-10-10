@@ -9,12 +9,20 @@
   transform: translateY(-100%);
   transition: @transition;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @md-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5rem;
     padding: 4rem 2rem;
   }
 
   @media (min-width: @lg-width) {
+    align-items: center;
     position: unset;
     top: unset;
     left: unset;
@@ -36,19 +44,20 @@
     display: flex;
     flex-direction: column;
     gap: 0.6em;
+    margin-bottom: 1.75em;
 
     @media (min-width: @md-width) {
       gap: 0.6rem;
     }
 
     @media (min-width: @lg-width) {
-      width: 45vw;
-      max-width: 850px;
+      width: 50%;
       flex-direction: row;
+      justify-content: center;
       flex-wrap: wrap;
       color: @light;
-      gap: 50px;
-      padding-right: 20px;
+      column-gap: 50px;
+      margin-bottom: 0;
     }
   }
 
