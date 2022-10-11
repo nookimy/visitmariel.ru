@@ -4,11 +4,10 @@ let windowWidth = document.documentElement.clientWidth;
 
 
 menuButton.onclick = function () {
-  if (windowWidth < 768) {
+  if (windowWidth < 992) {
     menuButton.classList.toggle("burger-button--opened");
     nav.classList.toggle("site-nav--opened");
   };
-
 };
 
 new Swiper('.main-slider.swiper',{

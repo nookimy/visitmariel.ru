@@ -3,7 +3,13 @@
   position: relative;
   .mp();
 
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
   & span {
+    display: block;
     color: @green;
   }
 
@@ -22,7 +28,18 @@
   .h1();
 
   @media (min-width: @md-width) {
-    display: none;
+    .h2();
+  }
+
+
+  & span {
+    display: inline;
+
+    @media (min-width: @lg-width) {
+      display: block;
+      margin-top: -1.25rem;
+      font-size: 0.9em;
+    }
   }
 
   &::before {
@@ -30,6 +47,18 @@
     right: -80px;
     width: 3.95em;
     height: 5.65em;
+    z-index: -1;
+
+    @media (min-width: @lg-width) {
+      right: -1rem;
+      transform: translateX(100%) translateY(-50%) rotate(-90deg);
+    }
+  }
+}
+
+.page--index .main-header .logo {
+  @media (min-width: @md-width) {
+    display: none;
   }
 }
 

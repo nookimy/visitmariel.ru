@@ -6,6 +6,10 @@
   padding-top: 16em;
   padding-bottom: 12em;
 
+  &__animated-logo {
+    flex-grow: 1;
+  }
+
   @media (min-width: @md-width) {
     position: absolute;
     top: 0;
@@ -24,5 +28,30 @@
     padding-top: 43px;
     padding-bottom: 0;
 
+  }
+}
+
+.page--inner .main-nav {
+  @media (min-width: @md-width) {
+    position: unset;
+    top: unset;
+    left: unset;
+  }
+  @media (min-width: @lg-width) {
+    padding-top: 3.7rem;
+    padding-bottom: 3.7rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7vw;
+  }
+
+  @media (min-width: @max-width) {
+    gap: 20rem;
+  }
+
+  &__animated-logo {
+    @media (min-width: @lg-width) {
+      flex-grow: unset;
+    }
   }
 }
