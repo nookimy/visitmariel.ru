@@ -1,0 +1,85 @@
+.breadcrumbs {
+  @media (max-width: @mobile-width-only) {
+    font-size: calc(100vw / 320);
+    margin-top: 20em;
+    margin-bottom: 20em;
+  }
+
+  @media (min-width: @md-width) {
+    margin-top: 2.6rem;
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    .list();
+    display: inline-flex;
+    align-items: center;
+    .text();
+    column-gap: 2em;
+
+    @media (min-width: @md-width) {
+      column-gap: 4.2rem;
+    }
+  }
+
+  &__list li {
+    position: relative;
+    line-height: 0;
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -1.25em;
+      transform: translateY(-50%) translateX(0%);
+      width: 0.75em;
+      height: 0.75em;
+      background: url("../img/breadcrumbs/right-outlined.svg") no-repeat center;
+      background-size: contain;
+      opacity: 0.5;
+
+      @media (min-width: @md-width) {
+        width: 1.2rem;
+        height: 1.2rem;
+        right: -2.5rem;
+      }
+    }
+  }
+
+  &__list li a {
+    transition: @transition;
+
+    &:hover,
+    &:focus {
+      color: @green;
+
+      & .icon {
+        & use.icon__symbol {
+          fill: @green;
+          opacity: 1;
+        }
+      }
+    }
+
+    & .icon {
+      width: 1.25em;
+      height: 1.25em;
+
+      @media (min-width: @md-width) {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      & use.icon__symbol {
+        fill: @dark-gray;
+        opacity: 0.5;
+      }
+    }
+  }
+}
