@@ -1,0 +1,64 @@
+.filters {
+  position: relative;
+  .text();
+  border: 1px solid #D9D9D9;
+  margin-bottom: 1.87em;
+  padding: 0.75em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    font-size: 1em;
+    .mp();
+    font-weight: normal;
+  }
+
+  &__set-btn {
+    .btn-reset();
+    width: 1.25em;
+    height: 1.25em;
+
+    & .icon {
+      width: 1.25em;
+      height: 1.25em;
+
+      &--close {
+        display: none;
+      }
+
+      &--set {
+        display: block;
+      }
+
+      & use.icon__symbol {
+        fill: @dark-gray;
+      }
+    }
+
+    &--opened {
+      & .icon {
+        &--close {
+          display: block;
+        }
+
+        &--set {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 0;
+    display: none;
+
+
+    &--opened {
+      height: auto;
+      display: block;
+    }
+  }
+}
