@@ -13,10 +13,13 @@ menuButton.onclick = function () {
 
 let filterButton = document.querySelector(".filters__set-btn");
 let filter = document.querySelector(".filters__wrap");
+
 filterButton.onclick = function () {
   filterButton.classList.toggle("filters__set-btn--opened");
   filter.classList.toggle("filters__wrap--opened");
 };
+
+
 
 new Swiper('.main-slider.swiper',{
   pagination: {

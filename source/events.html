@@ -44,7 +44,26 @@
           </svg>
         </button>
         <div class="filters__wrap">
-          Ntcn
+          <form class="form form__events">
+            <div class="form__fieldwrap">
+              <select name="events-categories">
+                <option value="all" selected>Все категории</option>
+                <option value="category1">Категория 1</option>
+                <option value="category2">Категория 2</option>
+              </select>
+            </div>
+            <div class="form__fieldwrap">
+              <input type="date" id="events-date" value="Дата" >
+            </div>
+            <div class="form__fieldwrap">
+              <input type="checkbox" id="events-pushkincard" checked>
+              <label for="events-pushkincard">Пушкинская карта</label>
+            </div>
+            <div class="form__fieldwrap">
+              <input type="checkbox" id="events-past">
+              <label for="events-past">Скрыть прошедшие события</label>
+            </div>
+          </form>
         </div>
       </div>
       <ul class="articles__list">
@@ -202,7 +221,7 @@
             <h3 class="article__title">ReQuizit</h3>
           </a>
         </li>
-        <li class="articles__item article">
+        <li class="articles__item article articles__item--past">
           <a class="articles__item-link" href="#!">
             <div class="article__img-wrap">
               <picture>
@@ -249,6 +268,11 @@
       </ul>
     </div>
   </section>
+  <section class="events articles page__section">
+    <div class="page__wrap">
+      <h2 class="page__subtitle"></h2>
+    </div>
+  </section>
   <p class="page__link-up">
     <a href="#!">
       <svg class="icon" width="28px" height="18px">
@@ -260,6 +284,7 @@
 </main>
 
 <include src="./source/less/blocks/main-footer/main-footer.html"></include>
+<script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/script.js"></script>
 </body>

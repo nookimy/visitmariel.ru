@@ -1,0 +1,133 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2em;
+  font-size: calc(100vw / 320);
+
+  @media (min-width: @lg-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 3.5rem;
+    row-gap: 1.5rem;
+  }
+
+  &__fieldwrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+
+    @media (min-width: @lg-width) {
+      width: auto;
+      flex-grow: 0;
+    }
+  }
+
+  & select,
+  & input,
+  & label {
+    .text();
+    color: @dark-gray;
+    padding-left: 2.61em;
+  }
+
+  & select {
+    .mp();
+    border: none;
+    width: 100%;
+
+    @media (min-width: @lg-width) {
+      width: 370px;
+      border: 1px solid #D9D9D9;
+      padding: 0.5em;
+    }
+
+    & option {
+      .mp();
+      font-size: 1em;
+    }
+  }
+
+  & input {
+    .mp();
+    border: none;
+  }
+
+  & input[type=date] {
+    width: 100%;
+
+    @media (min-width: @lg-width) {
+      width: 370px;
+      border: 1px solid #D9D9D9;
+      padding: 0.5em;
+    }
+  }
+
+  & input[type=checkbox] {
+    box-sizing: border-box;
+    width: 40px;
+    height: 20px;
+
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+
+    & + label {
+      width: 100%;
+      position: relative;
+    }
+
+    & + label {
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1.54em;
+        height: 0.77em;
+        border: 0.15em solid @dark-gray;
+        border-radius: 0.5em;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0.20em;
+        width: 0.4em;
+        height: 0.4em;
+        border-radius: 50%;
+        background-color: @dark-gray;
+        transform: translateY(-50%);
+
+      }
+      &::before,
+      &::after {
+        opacity: 0.5;
+        transition: @transition;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          left: 0.9em;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

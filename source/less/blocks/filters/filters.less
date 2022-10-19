@@ -9,16 +9,38 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (min-width: @lg-width) {
+    padding: 0;
+    border: none;
+  }
+
   &__title {
     font-size: 1em;
     .mp();
     font-weight: normal;
+
+    @media (min-width: @lg-width) {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+    }
   }
 
   &__set-btn {
     .btn-reset();
     width: 1.25em;
     height: 1.25em;
+
+    @media (min-width: @lg-width) {
+      display: none;
+    }
 
     & .icon {
       width: 1.25em;
@@ -54,6 +76,11 @@
     width: 100%;
     height: 0;
     display: none;
+
+    @media (min-width: @lg-width) {
+      display: block;
+      height: auto;
+    }
 
 
     &--opened {
