@@ -33,41 +33,17 @@
 
   <section class="events articles page__section">
     <div class="page__wrap">
-      <div class="events__filters filters">
-        <h2 class="filters__title">Фильтры</h2>
-        <button class="filters__set-btn">
-          <svg class="icon icon--set" width="20px" height="20px">
-            <use class="icon__symbol" xlink:href="#icon-set"></use>
-          </svg>
-          <svg class="icon icon--close" width="21px" height="20px">
-            <use class="icon__symbol" xlink:href="#icon-close"></use>
-          </svg>
-        </button>
-        <div class="filters__wrap">
-          <form class="form form__events">
-            <div class="form__fieldwrap">
-              <select name="events-categories">
-                <option value="all" selected>Все категории</option>
-                <option value="category1">Категория 1</option>
-                <option value="category2">Категория 2</option>
-              </select>
-            </div>
-            <div class="form__fieldwrap">
-              <input type="date" id="events-date" value="Дата" >
-            </div>
-            <div class="form__fieldwrap">
-              <input type="checkbox" id="events-pushkincard" checked>
-              <label for="events-pushkincard">Пушкинская карта</label>
-            </div>
-            <div class="form__fieldwrap">
-              <input type="checkbox" id="events-past">
-              <label for="events-past">Скрыть прошедшие события</label>
-            </div>
-          </form>
+      <form class="form form__events">
+        <div class="form__fieldwrap">
+          <select name="events-categories">
+            <option value="all" selected>Все категории</option>
+            <option value="category1">Категория 1</option>
+            <option value="category2">Категория 2</option>
+          </select>
         </div>
-      </div>
-      <ul class="articles__list">
-        <li class="articles__item articles__item--main article">
+      </form>
+      <!--<ul class="articles__list">
+        <li class="articles__item articles__item&#45;&#45;main article">
           <a class="articles__item-link" href="#!">
             <div class="article__img-wrap">
               <picture>
@@ -221,7 +197,7 @@
             <h3 class="article__title">ReQuizit</h3>
           </a>
         </li>
-        <li class="articles__item article articles__item--past">
+        <li class="articles__item article articles__item&#45;&#45;past">
           <a class="articles__item-link" href="#!">
             <div class="article__img-wrap">
               <picture>
@@ -243,7 +219,7 @@
             <h3 class="article__title">Выставка одного шедевра</h3>
           </a>
         </li>
-        <li class="articles__item article articles__item--past">
+        <li class="articles__item article articles__item&#45;&#45;past">
           <a class="articles__item-link" href="#!">
             <div class="article__img-wrap">
               <picture>
@@ -265,102 +241,7 @@
             <h3 class="article__title">Готическая симфония</h3>
           </a>
         </li>
-      </ul>
-    </div>
-  </section>
-  <section class="events articles page__section">
-    <div class="page__wrap">
-      <h2 class="page__subtitle">Пушкинская карта</h2>
-      <ul class="articles__list">
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image4-840@1x.webp 1x,
-            ./img/events/image4-840@2x.webp 2x,
-            ./img/events/image4-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image4-840@1x.jpg 1x,
-            ./img/events/image4-840@2x.jpg 2x,
-            ./img/events/image4-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image4-840@1x.jpg" alt="Готическая симфония">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Концерт</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Готическая симфония</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image5-840@1x.webp 1x,
-            ./img/events/image5-840@2x.webp 2x,
-            ./img/events/image5-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image5-840@1x.jpg 1x,
-            ./img/events/image5-840@2x.jpg 2x,
-            ./img/events/image5-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image5-840@1x.jpg" alt="День молодежи">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">шоу</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">День молодежи</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image1-840@1x.webp 1x,
-            ./img/events/image1-840@2x.webp 2x,
-            ./img/events/image1-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image1-840@1x.jpg 1x,
-            ./img/events/image1-840@2x.jpg 2x,
-            ./img/events/image1-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image1.jpg" alt="Спектакль “Югорно”">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Театры</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Спектакль “Югорно”</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image2-840@1x.webp 1x,
-            ./img/events/image2-840@2x.webp 2x,
-            ./img/events/image2-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image2-840@1x.jpg 1x,
-            ./img/events/image2-840@2x.jpg 2x,
-            ./img/events/image2-840@3x.jpg 3x">
-                <img src="./img/events/image2-840@1x.jpg" alt="ReQuizit">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Интеллектуальная игра</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">ReQuizit</h3>
-          </a>
-        </li>
-      </ul>
+      </ul>-->
     </div>
   </section>
   <p class="page__link-up">
