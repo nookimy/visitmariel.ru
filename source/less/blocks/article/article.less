@@ -115,6 +115,33 @@
 
 
     }
+
+    &--pushkincard {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 10em;
+        width: 40em;
+        height: 45em;
+        background-color: @light;
+        z-index: 2;
+        border-radius: 0 0 50% 50%;
+        background-image: url("../img/articles/pushkin.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 22em 24em;
+
+        @media (min-width: @md-width) {
+          right: 1rem;
+          width: 4rem;
+          height: 4.5rem;
+          background-size: 2.2rem 2.4rem;
+        }
+      }
+    }
   }
 
   &__item-link {
