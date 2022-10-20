@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Спецпроекты</title>
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body class="page page--inner">
+<div style="display:none">
+  <include src="source/img/sprite.svg"></include>
+</div>
+<include src="./source/less/blocks/main-header/main-header.html"></include>
+
+<main>
+  <h1 class="visually-hidden">Спецпроекты</h1>
+  <div class="breadcrumbs">
+    <div class="page__wrap">
+      <ul class="breadcrumbs__list">
+        <li>
+          <a href="/" title="Главная">
+            <svg class="icon" width="20px" height="21px">
+              <use class="icon__symbol" xlink:href="#icon-home"></use>
+            </svg>
+          </a>
+        </li>
+        <li>Спецпроекты</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="projects articles page__section">
+    <div class="page__wrap">
+      <form class="form projects__filter-form">
+        <div class="projects__filter-select">
+          <div class="form__fieldwrap">
+            <select name="projects-categories">
+              <option value="category1" selected>Наследие. Традиции</option>
+              <option value="category2">Гуманитарные науки</option>
+              <option value="category3">Гостеприимство</option>
+              <option value="category4">Креативные индустрии</option>
+              <option value="category5">Искусство. Спектакли, концерты, выставки</option>
+              <option value="category6">Образование в культуре</option>
+              <option value="category7">Добровольчество</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="projects__filter-radio-buttons">
+          <div class="form__fieldwrap">
+            <input type="radio" id="category1" name="projects-category" checked>
+            <label for="category1">Наследие. Традиции</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category2" name="projects-category">
+            <label for="category2">Гуманитарные науки</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category3" name="projects-category">
+            <label for="category3">Гостеприимство</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category4" name="projects-category">
+            <label for="category4">Креативные индустрии</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category5" name="projects-category">
+            <label for="category5">Искусство. Спектакли, концерты, выставки</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category6" name="projects-category">
+            <label for="category6">Образование в культуре</label>
+          </div>
+          <div class="form__fieldwrap">
+            <input type="radio" id="category7" name="projects-category">
+            <label for="category7">Добровольчество</label>
+          </div>
+
+        </div>
+      </form>
+      <div class="projects__category1">
+        <include src="./source/less/blocks/projects/projects.html"></include>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<include src="./source/less/blocks/main-footer/main-footer.html"></include>
+<script src="js/wow.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/sliders.js"></script>
+</body>
+</html>

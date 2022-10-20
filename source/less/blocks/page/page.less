@@ -43,17 +43,21 @@
   }
 
   &__link-up {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) translateY(-200%);
     .mp();
     display: flex;
     justify-content: center;
-    margin-bottom: 20em;
+    z-index: 5;
 
     @media (max-width: @mobile-width-only) {
       font-size: calc(100vw / 320);
     }
 
     @media (min-width: @md-width) {
-      margin-bottom: 2rem;
+
     }
 
     @media (min-width: @lg-width) {
@@ -92,35 +96,37 @@
     }
   }
 
+  &__subtitle {
+    position: relative;
+    .mp();
+    .h2();
+    text-transform: uppercase;
+    margin-bottom: 1em;
+
+    animation: fadeInLeft;
+    animation-duration: 1s;
+
+    &::before {
+      width: 500vw;
+      display: inline-block;
+      content: attr(data-foo);
+      position: absolute;
+      top: -0.13em;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+      .large();
+      opacity: 0.05;
+
+      @media (min-width: @md-width) {
+        top: -4.5rem;
+      }
+    }
+  }
+
   &--index {
     & .page {
-      &__subtitle {
-        position: relative;
-        .mp();
-        .h2();
-        text-transform: uppercase;
-        margin-bottom: 1em;
 
-        animation: fadeInLeft;
-        animation-duration: 1s;
-
-        &::before {
-          width: 500vw;
-          display: inline-block;
-          content: attr(data-foo);
-          position: absolute;
-          top: -0.13em;
-          left: 50%;
-          text-align: center;
-          transform: translateX(-50%);
-          .large();
-          opacity: 0.05;
-
-          @media (min-width: @md-width) {
-            top: -4.5rem;
-          }
-        }
-      }
 
       &__revers-wrap {
         display: flex;
@@ -130,19 +136,18 @@
   }
 
   &--inner {
-    & .page {
-      &__subtitle {
-        .mp();
-        .h3();
-        text-align: center;
-        margin-bottom: 1.25em;
+    & h3.page__subtitle {
+      .mp();
+      .h3();
+      text-align: center;
+      margin-bottom: 1.25em;
 
-        @media (min-width: @md-width) {
-          text-align: left;
-        }
+      @media (min-width: @md-width) {
+        text-align: left;
       }
     }
-    & .events.page__section {
+    & .events.page__section,
+    & .projects.page__section {
       padding-top: 0;
     }
   }

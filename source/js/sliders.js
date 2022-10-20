@@ -1,4 +1,3 @@
-
 new Swiper('.main-slider.swiper',{
   pagination: {
     el: '.swiper-pagination',
@@ -80,9 +79,9 @@ new Swiper('.partners__swiper.swiper',{
 
 
 let projectsSwiper;
-let projectsSwiperBlock = document.querySelector(".projects__swiper");
-let projectsList = document.querySelector('.projects__list');
-let projectsItem = document.querySelectorAll('.projects__item');
+let projectsSwiperBlock = document.querySelector('.projects-categories__swiper');
+let projectsList = document.querySelector('.projects-categories__list');
+let projectsItem = document.querySelectorAll('.projects-categories__item');
 
 let guideSwiper;
 let guideSwiperBlock = document.querySelector(".guide__swiper");
@@ -105,7 +104,7 @@ function removeClassesSwiper() {
 
 function checkScreen() {
   if (windowWidth >= 768) {
-    projectsSwiper = new Swiper('.swiper.projects__swiper', {
+    projectsSwiper = new Swiper('.swiper.projects-categories__swiper', {
       navigation: {
         nextEl: '.projects__btn-next',
         prevEl: '.projects__btn-prev'
@@ -181,3 +180,13 @@ function checkScreen() {
 removeClassesSwiper();
 
 checkScreen();
+
+
+wow = new WOW({
+  boxClass: 'wow',
+  animateClass: 'animate__animated',
+  offset: 0,
+  mobile: true,
+  live: true
+})
+wow.init();

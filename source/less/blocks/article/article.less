@@ -190,6 +190,33 @@
   }
 }
 
+.projects .articles {
+  &__list {
+    & .article {
+      &__img-wrap {
+        margin-bottom: 10em;
+
+        @media (min-width: @md-width) {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      & img {
+        @media (min-width: @xl-width) {
+          aspect-ratio: unset;
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    & .article {
+
+    }
+  }
+}
+
 .guide .articles {
   &__list {
     & .article {
