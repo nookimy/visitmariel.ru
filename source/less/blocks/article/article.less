@@ -181,6 +181,7 @@
         }
       }
 
+
       &__item--main {
         @media (min-width: @xl-width) {
           margin-bottom: 0;
@@ -207,12 +208,6 @@
           height: 400px;
         }
       }
-    }
-  }
-
-  &__item {
-    & .article {
-
     }
   }
 }
@@ -251,13 +246,36 @@
 .first-person .articles {
   &__list {
     & .article {
-      & img {
+      &__img-wrap {
+        margin-bottom: 10em;
+
         @media (min-width: @md-width) {
-          aspect-ratio: 1585 / 600;
+          margin-bottom: 1.2rem;
         }
+      }
+
+      &__title {
+        @media (min-width: @md-width) {
+          .text-title-big();
+          position: absolute;
+          bottom: 8rem;
+          left: 3rem;
+          color: @light;
+        }
+
       }
     }
   }
+
+  &__item--main {
+    & img {
+      @media (min-width: @md-width) {
+        aspect-ratio: 1585 / 600;
+      }
+    }
+  }
+
+
 }
 
 

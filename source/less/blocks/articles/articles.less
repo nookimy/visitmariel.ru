@@ -104,6 +104,28 @@
   }
 }
 
+.first-person .articles {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25em;
+
+    @media (min-width: @md-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  &__item {
+    &--main {
+      @media (min-width: @md-width) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    }
+  }
+}
+
 .guide .articles {
   &__list {
     display: flex;
