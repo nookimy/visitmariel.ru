@@ -13,6 +13,7 @@
   &__list {
     .list();
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     .text();
     column-gap: 2em;
@@ -24,7 +25,7 @@
 
   &__list li {
     position: relative;
-    line-height: 0;
+
 
     &:last-child {
       &::before {
@@ -53,6 +54,8 @@
   }
 
   &__list li a {
+    color: inherit;
+    text-decoration: none;
     transition: @transition;
 
     &:hover,
