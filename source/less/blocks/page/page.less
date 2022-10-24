@@ -1,17 +1,11 @@
 .page {
   &__section {
     overflow: hidden;
-    padding-top: 30em;
-    padding-bottom: 30em;
 
     @media (max-width: @mobile-width-only) {
       font-size: calc(100vw / 320);
     }
 
-    @media (min-width: @md-width) {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
   }
 
   &__wrap {
@@ -127,7 +121,15 @@
   &--index {
     & .page {
 
+      &__section {
+        padding-top: 30em;
+        padding-bottom: 30em;
 
+        @media (min-width: @md-width) {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+      }
       &__revers-wrap {
         display: flex;
         flex-direction: column;

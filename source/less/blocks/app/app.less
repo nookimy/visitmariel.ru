@@ -252,4 +252,88 @@
       background-image: url("../img/app/download-googleplay.jpg");
     }
   }
+
+  &__info {
+    margin: 0 auto;
+    margin-bottom: 30em;
+    width: 100%;
+    max-width: 1045px;
+
+
+    @media (min-width: @md-width) {
+      margin-top: 5rem;
+      margin-bottom: 19.1rem;
+    }
+
+    @media (min-width: @lg-width) {
+      margin-top: 0;
+    }
+
+    @media (min-width: @xl-width) {
+      display: flex;
+      gap: 3.5rem;
+    }
+
+    & b {
+      position: relative;
+      .text-title-big();
+
+      &::after {
+        display: inline-block;
+        content: "";
+        width: 1em;
+        height: 1em;
+        background: url("../img/app/emoji-eyes.svg") no-repeat center;
+        background-size: contain;
+        transform: translateY(25%);
+      }
+    }
+
+    & p {
+      position: relative;
+      .text();
+    }
+  }
+}
+
+.page--inner .app {
+  &__column-wrap {
+    @media (min-width: @lg-width) {
+      margin-top: -7.5rem;
+      margin-bottom: -5rem;
+    }
+
+    @media (min-width: @xl-width) {
+      margin-top: -14.5rem;
+    }
+
+    @media (min-width: @max-width) {
+      margin-top: -10rem;
+      margin-bottom: -10rem;
+    }
+
+  }
+
+  &__column-content {
+    @media (min-width: @max-width) {
+      left: 0;
+    }
+  }
+
+  &__column-img {
+    @media (min-width: @lg-width) {
+      right: 50%;
+      transform: translateX(75%);
+    }
+
+    @media (min-width: @xl-width) {
+      right: 50%;
+      transform: translateX(65%);
+    }
+
+    @media (min-width: @max-width) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
 }
