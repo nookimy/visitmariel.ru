@@ -1,0 +1,71 @@
+.tabs {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10em;
+
+  @media (min-width: @md-width) {
+    gap: 2rem;
+  }
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>.tabs__content  {
+  /* скрыть контент по умолчанию */
+  display: none;
+/*  border: 1px solid #e0e0e0;*/
+  /*padding: 10px 15px;*/
+
+}
+
+.tabs__content {
+  .text();
+  width: 100%;
+  flex-grow: 1;
+  height: 100%;
+  margin-bottom: auto;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4,
+#tab-btn-5:checked~#content-5,
+#tab-btn-6:checked~#content-6 {
+  display: block;
+}
+
+.tabs>label {
+  .text-title-big();
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: @light;
+  border: 1px solid #D9D9D9;
+  padding: 0.5em 0.75em;
+  /*transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;*/
+  cursor: pointer;
+  position: relative;
+
+  @media (min-width: @md-width) {
+    font-size: 2.4rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+
+
+.tabs>input[type="radio"]:checked+label {
+  color: @light;
+  background-color: @green;
+  border-color: @green;
+}
+
+.app .tabs {
+  height: 100%;
+}
