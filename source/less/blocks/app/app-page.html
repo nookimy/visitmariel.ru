@@ -1,5 +1,6 @@
 <div class="app">
   <section class="app__intro page__section">
+    <h2 class="visually-hidden">О приложении</h2>
     <div class="page__wrap">
       <div class="app__column-wrap">
         <div class="app__column-content">
@@ -52,6 +53,7 @@
     </div>
   </section>
   <section class="app__info-section">
+    <h2 class="visually-hidden">Информация</h2>
     <div class="page__wrap">
       <div class="app__info">
         <b>Приложение «Я здесь. Марий Эл» создано с большой любовью </b>
@@ -102,6 +104,95 @@
         </div>
       </div>
 
+
+    </div>
+  </section>
+  <section class="app__slider-section">
+    <h2 class="visually-hidden">Особенности приложения</h2>
+    <div class="page__wrap">
+      <div class="app__slider-wrap">
+        <div class="swiper app__slider-container">
+          <ul class="swiper-wrapper app__slider-list">
+            <li class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="
+                    ./img/app/slide1-370@1x.webp 1x,
+                    ./img/app/slide1-370@2x.webp 2x,
+                    ./img/app/slide1-370@3x.webp 3x">
+                <source type="image/jpeg" srcset="
+                    ./img/app/slide1-370@1x.jpg 1x,
+                    ./img/app/slide1-370@2x.jpg 2x,
+                    ./img/app/slide1-370@3x.jpg 3x">
+                <img class="app__slide-img" src="./img/app/slide1-370@1x.jpg">
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="
+                    ./img/app/slide2-370@1x.webp 1x,
+                    ./img/app/slide2-370@2x.webp 2x,
+                    ./img/app/slide2-370@3x.webp 3x">
+                <source type="image/jpeg" srcset="
+                    ./img/app/slide2-370@1x.jpg 1x,
+                    ./img/app/slide2-370@2x.jpg 2x,
+                    ./img/app/slide2-370@3x.jpg 3x">
+                <img class="app__slide-img" src="./img/app/slide2-370@1x.jpg">
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="
+                    ./img/app/slide3-370@1x.webp 1x,
+                    ./img/app/slide3-370@2x.webp 2x,
+                    ./img/app/slide3-370@3x.webp 3x">
+                <source type="image/jpeg" srcset="
+                    ./img/app/slide3-370@1x.jpg 1x,
+                    ./img/app/slide3-370@2x.jpg 2x,
+                    ./img/app/slide3-370@3x.jpg 3x">
+                <img class="app__slide-img" src="./img/app/slide3-370@1x.jpg">
+              </picture>
+            </li>
+          </ul>
+        </div>
+        <div class="app-slider__btn-next swiper-button-next">
+          <svg class="icon" width="28px" height="18px">
+            <use class="icon__symbol" xlink:href="#icon-arrow"></use>
+          </svg>
+        </div>
+        <div class="app-slider__btn-prev swiper-button-prev">
+          <svg class="icon" width="28px" height="18px">
+            <use class="icon__symbol" xlink:href="#icon-arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="app__form page__section">
+    <div class="page__wrap">
+      <h2 class="wow animate__animated animate__fadeInLeft page__subtitle" data-foo="Станьте партнером">Станьте партнером</h2>
+      <div class="app__form-text">
+        <p>Если  вы ведете бизнес, связанный с туризмом и оказываете услуги на территории республики Марий Эл, мы с удовольствием рассмотрим ваш продукт для включения в партнерскую сеть приложения.</p>
+
+      </div>
+      <form class="form">
+        <div class="form__fieldwrap form__fieldwrap--name">
+          <input type="text" id="user-name" placeholder="Имя" required>
+          <label class="visually-hidden" for="user-name">Имя</label>
+        </div>
+        <div class="form__fieldwrap form__fieldwrap--phone">
+          <input type="tel" id="user-phone" placeholder="Телефон" required>
+          <label class="visually-hidden" for="user-phone">Телефон</label>
+        </div>
+        <div class="form__fieldwrap form__fieldwrap--email">
+          <input type="email" id="user-email" placeholder="E-mail">
+          <label class="visually-hidden" for="user-email">E-mail</label>
+        </div>
+        <div class="form__fieldwrap form__fieldwrap--message">
+          <textarea id="message" rows="1" placeholder="Сообщение" style="width: 100%;"></textarea>
+        </div>
+        <button class="form__btn-submit" type="submit">Отправить заявку</button>
+        <p class="app__form-note">*Нажимая на кнопку, вы даёте согласие на обработку личных данных</p>
+      </form>
 
     </div>
   </section>

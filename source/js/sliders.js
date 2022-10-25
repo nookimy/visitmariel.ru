@@ -78,6 +78,8 @@ new Swiper('.partners__swiper.swiper',{
 
 
 
+
+
 let projectsSwiper;
 let projectsSwiperBlock = document.querySelector('.projects-categories__swiper');
 let projectsList = document.querySelector('.projects-categories__list');
