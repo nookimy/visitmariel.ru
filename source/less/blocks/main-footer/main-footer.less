@@ -4,6 +4,7 @@
   color: @light;
   padding-top: 30em;
   padding-bottom: 30em;
+  margin-top: 35em;
 
   @media (max-width: @mobile-width-only) {
     font-size: calc(100vw / 320);
@@ -12,6 +13,11 @@
   @media (min-width: @md-width) {
     padding-top: 6rem;
     padding-bottom: 9.7rem;
+    margin-top: 6rem;
+  }
+
+  @media (min-width: @lg-width) {
+    margin-top: 2rem;
   }
 
   &__wrap {
@@ -79,6 +85,7 @@
 
           &:hover,
           &:focus {
+            outline: none;
             color: @green;
           }
         }
@@ -106,8 +113,9 @@
         transition: @transition;
 
         &:hover,
-        &:active {
+        &:focus {
           color: @green;
+          outline: none;
         }
       }
     }
@@ -159,3 +167,13 @@
     }
   }
 }
+
+.page--projects .main-footer {
+  margin-top: -10px;
+
+  @media (min-width: @md-width) {
+    margin-top: -15px;
+  }
+}
+
+

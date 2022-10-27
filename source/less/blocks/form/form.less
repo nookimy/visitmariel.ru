@@ -232,6 +232,11 @@
       min-height: 6.8rem;
     }
 
+    &:hover,
+    &:focus {
+      outline-color: #78A5C6;
+    }
+
     &::placeholder {
       color: #433C3C;
     }
@@ -241,11 +246,15 @@
     .btn-reset();
     width: 100%;
     .menu-item();
-
     border-radius: 0.63em;
     padding: 0.68em 0.63em;
     background-color: #78A5C6;
     color: @light;
+
+    &:hover,
+    &:focus {
+      outline-color: #78A5C6;
+    }
 
     @media (min-width: @md-width) {
       .text-title();

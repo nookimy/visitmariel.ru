@@ -229,6 +229,7 @@
 
   &__btn-download {
     display: block;
+    position: relative;
     .btn-reset();
     width: 130em;
     height: 38em;
@@ -237,6 +238,13 @@
     background-repeat: no-repeat;
     border-radius: 5em;
     overflow: hidden;
+    transition: @transition;
+
+    &:hover,
+    &:focus {
+      scale: 1.05;
+      outline: none;
+    }
 
     @media (min-width: @md-width) {
       width: 17rem;
