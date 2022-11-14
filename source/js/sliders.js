@@ -6,7 +6,7 @@ new Swiper('.main-slider.swiper',{
   slidesPerView: 1,
   // Автопрокрутка
   autoplay: {
-    delay: 3000,
+    delay: 4000,
     stopOnLastSlide: false,
     disableOnInteraction: true,
   },
