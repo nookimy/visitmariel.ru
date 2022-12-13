@@ -245,6 +245,37 @@
   }
 }
 
+.iamhere .articles {
+  &__list {
+    & .article {
+      &__img-wrap {
+        margin-bottom: 10em;
+
+        @media (min-width: @md-width) {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      & img {
+        @media (min-width: @md-width) {
+          aspect-ratio: 370 / 492;
+        }
+      }
+
+      &__title {
+        @media (min-width: @md-width) {
+          margin-bottom: 0.6rem;
+        }
+      }
+
+      &__location {
+        .mp();
+        .text-small();
+      }
+    }
+  }
+}
+
 .first-person .articles {
   &__list {
     & .article {

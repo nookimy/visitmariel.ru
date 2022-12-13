@@ -135,6 +135,29 @@
   }
 }
 
+.iamhere .articles {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25em;
+
+    @media (min-width: @md-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3.5rem;
+      row-gap: 4rem;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: @xl-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
 .articles--more.page__section {
   & .articles {
     &__list {
