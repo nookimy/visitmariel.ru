@@ -1,0 +1,53 @@
+<section class="contacts page__section">
+  <div class="page__wrap">
+    <div class="contacts__form">
+      <div class="contacts__form-text">
+        <p>Предложить инициативу, задать свой вопрос можно через форму обратной связи. </p>
+      </div>
+      <h2 class="contacts__subtitle">Напишите нам</h2>
+      <form class="form">
+        <div class="form__fieldwrap form__fieldwrap--name">
+          <input type="text" id="user-name" placeholder="Имя" required>
+          <label class="visually-hidden" for="user-name">Имя</label>
+        </div>
+        <div class="form__fieldwrap form__fieldwrap--email">
+          <input type="email" id="user-email" placeholder="E-mail">
+          <label class="visually-hidden" for="user-email">E-mail</label>
+        </div>
+        <div class="form__fieldwrap form__fieldwrap--message">
+          <textarea id="message" rows="3" placeholder="Сообщение" style="width: 100%;"></textarea>
+        </div>
+        <button class="form__btn-submit" type="submit">Отправить</button>
+        <p class="contacts__form-note">* Нажимая на кнопку, вы даёте согласие на обработку личных данных</p>
+      </form>
+
+    </div>
+    <div class="contacts__info">
+      <h2 class="contacts__subtitle">Контактные данные:</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">424006 Россия,  Республика Марий Эл,  г. Йошкар-Ола, ул. Советская, 153 </li>
+        <li class="contacts__item"><a class="phone" href="tel:+78362347530">+7 836 234-75-30</a></li>
+        <li class="contacts__item"><a class="email" href="mailto:evseev-museum@mail.ru">evseev-museum@mail.ru</a></li>
+      </ul>
+      <div class="project-leader">
+        <div class="project-leader__img-wrap">
+          <picture>
+            <source type="image/webp" srcset="
+                    ./img/contacts/project-leader-100@1x.webp 1x,
+                    ./img/contacts/project-leader-100@2x.webp 2x,
+                    ./img/contacts/project-leader-100@3x.webp 3x">
+            <source type="image/jpeg" srcset="
+                    ./img/contacts/project-leader-100@1x.jpg 1x,
+                    ./img/contacts/project-leader-100@2x.jpg 2x,
+                    ./img/contacts/project-leader-100@3x.jpg 3x">
+            <img class="project-leader__img" src="./img/contacts/project-leader-100@1x.jpg" alt="Руководитель проекта Светлана Зверева">
+          </picture>
+        </div>
+        <p class="project-leader__info">Руководитель проекта: Светлана Зверева</p>
+      </div>
+    </div>
+    <div class="contacts__map-wrap">
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,150 @@
+.contacts {
+  & .page__wrap {
+    @media (min-width: @lg-width) {
+      display: grid;
+      grid-template-columns: 1fr 370px;
+      grid-template-areas:
+        "form info"
+        "map map";
+      column-gap: 3rem;
+      row-gap: 6rem;
+    }
+
+    @media (min-width: @xl-width) {
+      column-gap: 17rem;
+    }
+  }
+  &__subtitle {
+    .mp();
+    .text-title-big();
+    color: @dark;
+    margin-bottom: 1em;
+  }
+
+  &__form {
+    margin-bottom: 30em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 6rem;
+    }
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 0;
+      grid-area: form;
+    }
+  }
+  &__form-text {
+    .text();
+    color: @dark;
+    margin-bottom: 1.25em;
+
+    p {
+      .mp();
+    }
+  }
+
+  &__form-note {
+    .mp();
+    .text-small();
+    width: 100%;
+    color: #646464;
+
+    @media (min-width: @lg-width) {
+      grid-area: note;
+    }
+  }
+
+  &__info {
+    @media (min-width: @lg-width) {
+      grid-area: info;
+    }
+  }
+
+  &__list {
+    .list();
+    margin-bottom: 28em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20em;
+
+    @media (min-width: @md-width) {
+      row-gap: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__item {
+    .text();
+
+    & a {
+      color: inherit;
+
+      &.phone {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__map-wrap {
+    display: block;
+    width: 100%;
+    aspect-ratio: 278 / 320;
+    background-color: #CACACA;
+
+    @media (min-width: @md-width) {
+      aspect-ratio: unset;
+      height: 500px;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-area: map;
+    }
+
+  }
+}
+
+.project-leader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20em;
+  margin-bottom: 30em;
+
+  @media (min-width: @md-width) {
+    column-gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: @lg-width) {
+    margin-bottom: 0;
+  }
+
+
+
+  &__img-wrap {
+    width: 80em;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @media (min-width: @md-width) {
+      width: 10rem;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    .mp();
+    .text();
+    width: 150px;
+    flex-grow: 1;
+  }
+
+
+}

@@ -326,3 +326,97 @@
     }
   }
 }
+
+.contacts .form {
+  display: flex;
+  gap: 10em;
+  margin-bottom: 10em;
+
+  @media (min-width: @xl-width) {
+    display: grid;
+    column-gap: 3.5rem;
+    row-gap: 3rem;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-areas: "name name email" "message message message" "note note button";
+    align-items: start;
+  }
+
+
+
+  &__fieldwrap {
+    width: 100%;
+
+    &--name {
+      @media (min-width: @md-width) {
+        grid-area: name;
+      }
+    }
+
+    &--phone {
+      @media (min-width: @md-width) {
+        grid-area: phone;
+      }
+    }
+
+    &--email {
+      @media (min-width: @md-width) {
+        grid-area: email;
+      }
+    }
+
+    &--message {
+      @media (min-width: @md-width) {
+        grid-area: message;
+      }
+    }
+  }
+
+  & input[type=text],
+  & input[type=tel],
+  & input[type=email],
+  & textarea {
+    background: transparent;
+    max-width: unset;
+    width: 100%;
+    .text();
+    border: 1px solid #D9D9D9;
+    border-radius: 0.63em;
+    padding: 0.68em 0.63em;
+
+    @media (min-width: @md-width) {
+      padding: 0.5em 0.77em;
+      min-height: 6.8rem;
+    }
+
+    &:hover,
+    &:focus {
+      outline-color: #78A5C6;
+    }
+
+    &::placeholder {
+      color: #433C3C;
+    }
+  }
+
+  &__btn-submit {
+    .btn-reset();
+    width: 100%;
+    .menu-item();
+    border-radius: 0.63em;
+    padding: 0.68em 0.63em;
+    background-color: #78A5C6;
+    color: @light;
+
+    &:hover,
+    &:focus {
+      outline-color: #78A5C6;
+    }
+
+    @media (min-width: @md-width) {
+      .text-title();
+      padding: 0.68em 0.79em;
+      min-height: 6.8rem;
+      grid-area: button;
+    }
+  }
+}
