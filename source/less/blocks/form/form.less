@@ -132,11 +132,25 @@
   }
 }
 
-.projects__filter-form {
+.projects__filter-form,
+.search-result__filter-form {
   & select {
     border: 1px solid #D9D9D9;
-    padding: 0.75em;
+    padding: 0.63em 3.13em 0.63em 0.63em;
     margin-bottom: 1.87em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../img/form/chevron-down.svg") no-repeat;
+    background-size: 1.25em 1.25em;
+    background-position: center right 0.93em;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 4rem;
+      padding: 1.3rem 7rem 1.3rem 2rem;
+      background-size: 1.5em 1.5em;
+      background-position: center right 2.5rem;
+    }
   }
 
   & label {
@@ -146,6 +160,7 @@
     padding: 0.63em 0.83em;
     border: 1px solid #D9D9D9;
     transition: @transition;
+    cursor: pointer;
   }
   & input[type=radio] {
     position: absolute;
@@ -173,6 +188,8 @@
     }
   }
 }
+
+
 
 .iamhere__filter-form {
 
