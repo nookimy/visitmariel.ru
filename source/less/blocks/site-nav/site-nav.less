@@ -22,7 +22,6 @@
     align-items: center;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 5rem;
     position: unset;
     top: unset;
     left: unset;
@@ -36,6 +35,14 @@
   &--opened {
     top: 0;
     transform: translateY(0);
+  }
+
+  &__wrap {
+    @media (min-width: @lg-width) {
+      display: flex;
+      gap: 2.5rem;
+      margin-left: auto;
+    }
   }
 
   &__list {
@@ -80,10 +87,10 @@
 }
 
 .page--index .site-nav {
+
   &__list {
     @media (min-width: @lg-width) {
-      width: 40%;
-      flex-grow: 1;
+      width: 50%;
       justify-content: flex-start;
     }
 
@@ -99,7 +106,7 @@
   @media (min-width: @lg-width) {
     width: 100%;
     align-items: center;
-    gap: 7vw;
+    gap: 3rem;
   }
 
   @media (min-width: @max-width) {
