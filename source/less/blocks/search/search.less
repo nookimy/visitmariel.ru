@@ -77,42 +77,17 @@
   }
 }
 
-.page--index .main-header .search {
+.main-header .search {
   @media (min-width: @lg-width) {
     display: flex;
     max-width: unset;
     justify-content: flex-end;
-    width: 40%;
+    width: 440px;
     flex-grow: 1;
 
     &__form {
       max-width: 50rem;
 
-    }
-  }
-}
-
-.page--inner .main-header .search {
-  @media (min-width: @lg-width) {
-    width: 4.2rem;
-    max-width: unset;
-
-    &__input {
-      @media (min-width: @lg-width) {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 0;
-        padding: 0;
-      }
-    }
-
-    &__btn-submit {
-      position: unset;
-      top: unset;
-      right: unset;
-      transform: unset;
     }
   }
 }
