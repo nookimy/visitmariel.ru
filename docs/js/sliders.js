@@ -108,8 +108,8 @@ function checkScreen() {
   if (windowWidth >= 768) {
     projectsSwiper = new Swiper('.swiper.projects-categories__swiper', {
       navigation: {
-        nextEl: '.projects__btn-next',
-        prevEl: '.projects__btn-prev'
+        nextEl: '.projects-categories__btn-next',
+        prevEl: '.projects-categories__btn-prev'
       },
 
 
