@@ -76,6 +76,15 @@ new Swiper('.partners__swiper.swiper',{
   },
 });
 
+new Swiper('.article__slider-wrap.swiper',{
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  loop: true,
+});
+
 
 
 
@@ -191,4 +200,5 @@ wow = new WOW({
   mobile: true,
   live: true
 })
+
 wow.init();
