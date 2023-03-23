@@ -3735,12 +3735,12 @@ img {
   }
 }
 .page__section.article--event .article__tags-list {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
