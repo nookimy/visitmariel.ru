@@ -2,8 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Куда сходить</title>
+  <title>Опережая время</title>
   <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="robots" content="noindex, nofollow">
@@ -121,7 +122,7 @@
 
 
 <main>
-  <h1 class="visually-hidden">Куда сходить</h1>
+  <h1 class="visually-hidden">Спецпроекты</h1>
   <div class="breadcrumbs">
     <div class="page__wrap">
       <ul class="breadcrumbs__list">
@@ -132,344 +133,182 @@
             </svg>
           </a>
         </li>
-        <li>Куда сходить</li>
+        <li>
+          <a href="events.html">
+            Куда сходить
+          </a>
+        </li>
+        <li>Опережая время</li>
       </ul>
     </div>
   </div>
 
-  <section class="events articles page__section">
-    <div class="page__wrap">
-      <div class="events__filters filters">
-        <h2 class="filters__title">Фильтры</h2>
-        <button class="filters__set-btn">
-          <svg class="icon icon--set" width="20px" height="20px">
-            <use class="icon__symbol" xlink:href="#icon-set"></use>
-          </svg>
-          <svg class="icon icon--close" width="21px" height="20px">
-            <use class="icon__symbol" xlink:href="#icon-close"></use>
-          </svg>
-        </button>
-        <div class="filters__wrap">
-          <form class="form">
-            <div class="form__fieldwrap">
-              <select name="events-categories">
-                <option value="all" selected="">Все категории</option>
-                <option value="category1">Категория 1</option>
-                <option value="category2">Категория 2</option>
-              </select>
-            </div>
-            <div class="form__fieldwrap">
-              <input type="date" id="events-date" value="Дата">
-            </div>
-            <div class="form__fieldwrap">
-              <input type="checkbox" id="events-pushkincard" checked="">
-              <label for="events-pushkincard">Пушкинская карта</label>
-            </div>
-            <div class="form__fieldwrap">
-              <input type="checkbox" id="events-past">
-              <label for="events-past">Скрыть прошедшие события</label>
-            </div>
-          </form>
-        </div>
+  <section class="article article--event page__section">
+  <div class="page__wrap">
+    <div class="article__header">
+      <div class="article__img-wrap">
+        <picture>
+          <source type="image/webp" srcset="
+                ./img/first-person/image1-1600@1x.webp 1x,
+                ./img/first-person/image1-1600@2x.webp 2x,
+                ./img/first-person/image1-1600@3x.webp 3x">
+          <source type="image/jpeg" srcset="
+                ./img/first-person/image1-1600@1x.jpg 1x,
+                ./img/first-person/image1-1600@2x.jpg 2x,
+                ./img/first-person/image1-1600@3x.jpg 3x">
+          <img class="article__img" src="./img/first-person/image1-1600@1x.jpg" alt="Опережая время">
+        </picture>
       </div>
-      <ul class="articles__list">
-        <li class="articles__item articles__item--main article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image1-840@1x.webp 1x,
-            ./img/events/image1-840@2x.webp 2x,
-            ./img/events/image1-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image1-840@1x.jpg 1x,
-            ./img/events/image1-840@2x.jpg 2x,
-            ./img/events/image1-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image1.jpg" alt="Спектакль “Югорно”">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Театры</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Спектакль “Югорно”</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image2-840@1x.webp 1x,
-            ./img/events/image2-840@2x.webp 2x,
-            ./img/events/image2-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image2-840@1x.jpg 1x,
-            ./img/events/image2-840@2x.jpg 2x,
-            ./img/events/image2-840@3x.jpg 3x">
-                <img src="./img/events/image2-840@1x.jpg" alt="ReQuizit">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Интеллектуальная игра</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">ReQuizit</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image3-840@1x.webp 1x,
-            ./img/events/image3-840@2x.webp 2x,
-            ./img/events/image3-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image3-840@1x.jpg 1x,
-            ./img/events/image3-840@2x.jpg 2x,
-            ./img/events/image3-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image3-840@1x.jpg" alt="Выставка одного шедевра">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Выставки</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Выставка одного шедевра</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image4-840@1x.webp 1x,
-            ./img/events/image4-840@2x.webp 2x,
-            ./img/events/image4-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image4-840@1x.jpg 1x,
-            ./img/events/image4-840@2x.jpg 2x,
-            ./img/events/image4-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image4-840@1x.jpg" alt="Готическая симфония">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Концерт</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Готическая симфония</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image5-840@1x.webp 1x,
-            ./img/events/image5-840@2x.webp 2x,
-            ./img/events/image5-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image5-840@1x.jpg 1x,
-            ./img/events/image5-840@2x.jpg 2x,
-            ./img/events/image5-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image5-840@1x.jpg" alt="День молодежи">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">шоу</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">День молодежи</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image1-840@1x.webp 1x,
-            ./img/events/image1-840@2x.webp 2x,
-            ./img/events/image1-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image1-840@1x.jpg 1x,
-            ./img/events/image1-840@2x.jpg 2x,
-            ./img/events/image1-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image1.jpg" alt="Спектакль “Югорно”">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Театры</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Спектакль “Югорно”</h3>
-          </a>
-        </li>
-        <li class="articles__item article">
-          <a class="articles__item-link" href="event.html">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image2-840@1x.webp 1x,
-            ./img/events/image2-840@2x.webp 2x,
-            ./img/events/image2-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image2-840@1x.jpg 1x,
-            ./img/events/image2-840@2x.jpg 2x,
-            ./img/events/image2-840@3x.jpg 3x">
-                <img src="./img/events/image2-840@1x.jpg" alt="ReQuizit">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Интеллектуальная игра</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">ReQuizit</h3>
-          </a>
-        </li>
-        <li class="articles__item article articles__item--past">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image3-840@1x.webp 1x,
-            ./img/events/image3-840@2x.webp 2x,
-            ./img/events/image3-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image3-840@1x.jpg 1x,
-            ./img/events/image3-840@2x.jpg 2x,
-            ./img/events/image3-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image3-840@1x.jpg" alt="Выставка одного шедевра">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Выставки</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Выставка одного шедевра</h3>
-          </a>
-        </li>
-        <li class="articles__item article articles__item--past">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image4-840@1x.webp 1x,
-            ./img/events/image4-840@2x.webp 2x,
-            ./img/events/image4-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image4-840@1x.jpg 1x,
-            ./img/events/image4-840@2x.jpg 2x,
-            ./img/events/image4-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image4-840@1x.jpg" alt="Готическая симфония">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Концерт</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Готическая симфония</h3>
-          </a>
-        </li>
-      </ul>
+      <div class="article__info">
+        <p class="article__type">Спектакли</p>
+        <p class="article__age">12+</p>
+      </div>
+      <p class="article__date">24 сентября 2021 - 23 марта 2023</p>
+      <h3 class="article__title">Балет «Ромео и Джульетта»</h3>
+      <div class="article__additional-info">
+        <p class="article__location-name">Марийский государственный академический театр оперы и балета им. Эрика Сапаева</p>
+        <p class="article__location-address">Респ Марий Эл г Йошкар-Ола ул Комсомольская д 130</p>
+        <p class="article__price">Цена: от 300 руб.</p>
+      </div>
+
+
     </div>
-  </section>
-  <section class="events articles page__section">
-    <div class="page__wrap">
-      <h3 class="page__subtitle">Пушкинская карта</h3>
-      <ul class="articles__list">
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image4-840@1x.webp 1x,
-            ./img/events/image4-840@2x.webp 2x,
-            ./img/events/image4-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image4-840@1x.jpg 1x,
-            ./img/events/image4-840@2x.jpg 2x,
-            ./img/events/image4-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image4-840@1x.jpg" alt="Готическая симфония">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Концерт</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Готическая симфония</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image5-840@1x.webp 1x,
-            ./img/events/image5-840@2x.webp 2x,
-            ./img/events/image5-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image5-840@1x.jpg 1x,
-            ./img/events/image5-840@2x.jpg 2x,
-            ./img/events/image5-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image5-840@1x.jpg" alt="День молодежи">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">шоу</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">День молодежи</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image1-840@1x.webp 1x,
-            ./img/events/image1-840@2x.webp 2x,
-            ./img/events/image1-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image1-840@1x.jpg 1x,
-            ./img/events/image1-840@2x.jpg 2x,
-            ./img/events/image1-840@3x.jpg 3x">
-                <img class="brand__img" src="./img/events/image1.jpg" alt="Спектакль “Югорно”">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Театры</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">Спектакль “Югорно”</h3>
-          </a>
-        </li>
-        <li class="articles__item articles__item--pushkincard article">
-          <a class="articles__item-link" href="#!">
-            <div class="article__img-wrap">
-              <picture>
-                <source type="image/webp" srcset="
-            ./img/events/image2-840@1x.webp 1x,
-            ./img/events/image2-840@2x.webp 2x,
-            ./img/events/image2-840@3x.webp 3x">
-                <source type="image/jpeg" srcset="
-            ./img/events/image2-840@1x.jpg 1x,
-            ./img/events/image2-840@2x.jpg 2x,
-            ./img/events/image2-840@3x.jpg 3x">
-                <img src="./img/events/image2-840@1x.jpg" alt="ReQuizit">
-              </picture>
-              <div class="article__info">
-                <p class="article__type">Интеллектуальная игра</p>
-                <p class="article__date">22.06.2022</p>
-              </div>
-            </div>
-            <h3 class="article__title">ReQuizit</h3>
-          </a>
-        </li>
-      </ul>
+    <div class="article__content">
+      <div class="swiper article__slider-wrap">
+        <ul class="swiper-wrapper article__slider">
+          <li class="swiper-slide article__slide">
+            <img src="./img/article/image1-600@1x.png">
+          </li>
+          <li class="swiper-slide article__slide">
+            <img src="./img/article/image1-600@1x.png">
+          </li>
+          <li class="swiper-slide article__slide">
+            <img src="./img/article/image1-600@1x.png">
+          </li>
+          <li class="swiper-slide article__slide">
+            <img src="./img/article/image1-600@1x.png">
+          </li>
+          <li class="swiper-slide article__slide">
+            <img src="./img/article/image1-600@1x.png">
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p>Марийцы — немногочисленный талантливый поволжский народ, сумевший сохранить до наших дней уникальность своей этнорелигии и этнокультуры. Древний марийский этнос сформировался в I тыс. н. э. в Волго-Вятском междуречье из финно-угорских племён. В становлении и развитии этого народа большое значение имели тесные этнокультурные связи с волжскими булгарами, затем чувашами и татарами. После вхождения марийцев в состав Русского государства (1551–1552) интенсивными стали также связи с русскими. Анонимный автор «Сказания о царстве Казанском» времён Ивана Грозного, известный под именем Казанского летописца, называет марийцев «землепашцами-трудниками», т. е. любящими труд (Васин, 1959: 8).</p>
+      <img src="./img/article/image1-600@1x.png">
+      <p>Этноним «черемис» представляет собой сложный, многозначный социокультурный и историко-психологический феномен. Мари сами себя никогда не называют «черемисами» и считают такое обращение оскорбительным (Шкалина, 2003, эл. ресурс). Тем не менее, это название стало одним из компонентов их самосознания. В исторической литературе мари впервые упоминаются в 961 г. в письме хазарского кагана Иосифа под именем «цармис» в числе народов, плативших ему дань. В языках соседних народов на сегодняшний день сохранились созвучные названия: чувашском — сярмыс, татарском — чирмыш, русском — черемис. О черемисах писал Нестор в «Повести временных лет». В лингвистической литературе нет единой точки зрения по поводу происхождения этого этнонима. Среди переводов слова «черемис» финно-угорскими авторами, обнаруживающими в нем уральские корни, наиболее распространенными являются: а) «человек из племени чере (чар, cap)»; б) «воинственный, лесной человек» (там же).</p>
     </div>
-  </section>
+    <ul class="article__tags-list">
+      <li>Классическое искусство</li>
+      <li>Балет</li>
+      <li>Исполнительское искусство</li>
+      <li>Сергей Прокофьев</li>
+      <li>Хореография</li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+  <section class="articles articles--more page__section">
+  <div class="page__wrap">
+    <h3 class="page__subtitle">Читайте также</h3>
+    <ul class="articles__list">
+      <li class="articles__item article">
+        <a class="articles__item-link" href="#!">
+          <div class="article__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="
+            ./img/articles/image2-840@1x.webp 1x,
+            ./img/articles/image2-840@2x.webp 2x,
+            ./img/articles/image2-840@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+            ./img/articles/image2-840@1x.jpg 1x,
+            ./img/articles/image2-840@2x.jpg 2x,
+            ./img/articles/image2-840@3x.jpg 3x">
+              <img class="brand__img" src="./img/articles/image2-840@1x.jpg" alt="Кто такие марийцы">
+            </picture>
+            <div class="article__info">
+              <p class="article__type">Статьи</p>
+              <p class="article__date">22.06.2022</p>
+            </div>
+          </div>
+          <h3 class="article__title">Кто такие марийцы</h3>
+        </a>
+      </li>
+      <li class="articles__item article">
+        <a class="articles__item-link" href="#!">
+          <div class="article__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="
+            ./img/articles/image3-840@1x.webp 1x,
+            ./img/articles/image3-840@2x.webp 2x,
+            ./img/articles/image3-840@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+            ./img/articles/image3-840@1x.jpg 1x,
+            ./img/articles/image3-840@2x.jpg 2x,
+            ./img/articles/image3-840@3x.jpg 3x">
+              <img class="brand__img" src="./img/articles/image3-840@1x.jpg" alt="Акпарс - и князь, и хитрец, и на гуслях игрец">
+            </picture>
+            <div class="article__info">
+              <p class="article__type">Статьи</p>
+              <p class="article__date">22.06.2022</p>
+            </div>
+          </div>
+          <h3 class="article__title">Акпарс - и князь, и хитрец, и на гуслях игрец</h3>
+        </a>
+      </li>
+      <li class="articles__item article">
+        <a class="articles__item-link" href="#!">
+          <div class="article__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="
+            ./img/articles/image4-840@1x.webp 1x,
+            ./img/articles/image4-840@2x.webp 2x,
+            ./img/articles/image4-840@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+            ./img/articles/image4-840@1x.jpg 1x,
+            ./img/articles/image4-840@2x.jpg 2x,
+            ./img/articles/image4-840@3x.jpg 3x">
+              <img class="brand__img" src="./img/articles/image4.jpg" alt="Языческие моления">
+            </picture>
+            <div class="article__info">
+              <p class="article__type">Статьи</p>
+              <p class="article__date">22.06.2022</p>
+            </div>
+          </div>
+          <h3 class="article__title">Языческие моления</h3>
+        </a>
+      </li>
+      <li class="articles__item article">
+        <a class="articles__item-link" href="#!">
+          <div class="article__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="
+            ./img/articles/image5-840@1x.webp 1x,
+            ./img/articles/image5-840@2x.webp 2x,
+            ./img/articles/image5-840@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+            ./img/articles/image5-840@1x.jpg 1x,
+            ./img/articles/image5-840@2x.jpg 2x,
+            ./img/articles/image5-840@3x.jpg 3x">
+              <img src="./img/articles/image5-840@1x.jpg" alt="Мистические озера Марий Эл">
+            </picture>
+            <div class="article__info">
+              <p class="article__type">Статьи</p>
+              <p class="article__date">22.06.2022</p>
+            </div>
+          </div>
+          <h3 class="article__title">Мистические озера Марий Эл</h3>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
 </main>
+
 <footer class="main-footer">
   <p class="page__link-up">
   <a href="#top">
@@ -552,6 +391,7 @@
 </footer>
 
 <script src="js/wow.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/sliders.js"></script>
 </body>
