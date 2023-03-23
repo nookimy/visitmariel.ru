@@ -386,7 +386,7 @@
 
     &__title {
       .mp();
-      .text-title();
+      .text-title-big();
       transition: @transition;
       z-index: 10;
 
@@ -465,5 +465,135 @@
 
   }
 }
+
+.page__section.article--event {
+  & .article {
+    &__header {
+      @media (min-width: @md-width) {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 0;
+        grid-template-areas:
+        "img img"
+        "title title"
+        "info date"
+        "additional-info additional-info";
+      }
+    }
+
+    &__title {
+      margin-bottom: 1em;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+      }
+    }
+
+    &__info {
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 425px;
+        margin-left: auto;
+        justify-content: unset;
+      }
+    }
+
+    &__date {
+      margin-bottom: 1em;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 425px;
+        margin-right: auto;
+        text-align: right;
+        grid-area: date;
+        margin-bottom: 0;
+      }
+    }
+
+    &__age {
+      .mp();
+      .text-small-caps();
+      padding: 0.33em 0.50em;
+      border: 1px solid #CACACA;
+      border-radius: 2px;
+    }
+
+
+    &__additional-info {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+
+      @media (min-width: @md-width) {
+        display: grid;
+        grid-template-columns: auto 150px;
+        grid-template-areas:
+        "location-name location-name"
+        "location-address price";
+        row-gap: 2rem;
+
+        grid-area: additional-info;
+      }
+    }
+
+    &__location-name {
+      .mp();
+      .location-name();
+      margin-bottom: 0.5em;
+
+      @media (min-width: @md-width) {
+        margin-bottom: 0;
+        grid-area: location-name;
+      }
+    }
+
+    &__location-address {
+      .mp();
+      .text-small();
+
+      @media (min-width: @md-width) {
+        grid-area: location-address;
+      }
+    }
+
+    &__price {
+      .mp();
+      .text-small();
+      color: @blue;
+
+      @media (min-width: @md-width) {
+        grid-area: price;
+        text-align: right;
+      }
+    }
+
+    &__tags-list {
+      .mp();
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      .list();
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      .location-name();
+      margin-bottom: 1em;
+
+
+      & li {
+        border: 1px solid #D9D9D9;
+        padding: 0.5em;
+      }
+
+      @media (min-width: @md-width) {
+
+      }
+    }
+  }
+}
+
 
 
