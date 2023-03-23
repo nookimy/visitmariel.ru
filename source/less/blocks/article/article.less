@@ -347,9 +347,9 @@
     }
 
     &__info {
-      position: absolute;
-      left: 10em;
-      bottom: 40em;
+      margin-top: -40em;
+      margin-bottom: -20em;
+      padding-left: 10em;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -360,9 +360,9 @@
       z-index: 5;
 
       @media (min-width: @md-width) {
-        position: static;
-        left: unset;
-        bottom: unset;
+        margin-top: 0;
+        padding-left: 0;
+        margin-bottom: 0;
         gap: 1.6rem;
         grid-area: info;
         color: #433C3C;
@@ -407,7 +407,6 @@
       & img {
         display: block;
         width: 100%;
-        max-width: 600px;
         aspect-ratio: 6 / 4;
         margin: 0 auto;
       }
@@ -458,7 +457,6 @@
     &__slide > img {
       .mp();
       width: 100%;
-      max-width: 600px;
       margin: 0 auto;
       aspect-ratio: 4 / 3;
       object-fit: cover;
