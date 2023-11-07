@@ -32,13 +32,47 @@ cookiesAgree.onclick = function () {
 };
 
 
-let filterButton = document.querySelector(".filters__set-btn");
+let filterButton = document.querySelectorAll(".filters__set-btn");
 let filter = document.querySelector(".filters__wrap");
 
-filterButton.onclick = function () {
-  filterButton.classList.toggle("filters__set-btn--opened");
-  filter.classList.toggle("filters__wrap--opened");
+
+
+if (filterButton.length > 0) {
+  filterButton.onclick = function () {
+      filterButton.classList.toggle("filters__set-btn--opened");
+      filter.classList.toggle("filters__wrap--opened");
+
+  };
 };
 
+
+// при нажатии на кнопку .btn-up
+document.querySelector('.btn--up').onclick = () => {
+  // переместим в начало страницы
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+};
+
+var prevScrollpos = window.pageYOffset;
+function scrollShowHeader() {
+
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.btn--up').style.transform = "translateX(0)";
+  } else {
+    document.querySelector('.btn--up').style.transform = "translateX(150%)";
+  }
+
+  prevScrollpos = currentScrollPos;
+
+}
+
+window.addEventListener('scroll', function() {
+  scrollShowHeader();
+});
 
 
