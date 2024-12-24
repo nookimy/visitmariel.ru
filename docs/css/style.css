@@ -1016,6 +1016,7 @@ img {
   opacity: 1;
 }
 .projects__filter-form select,
+.military-glory__filter-form select,
 .search-result__filter-form select {
   border: 1px solid #D9D9D9;
   padding: 0.63em 3.13em 0.63em 0.63em;
@@ -1029,6 +1030,7 @@ img {
 }
 @media (min-width: 768px) {
   .projects__filter-form select,
+  .military-glory__filter-form select,
   .search-result__filter-form select {
     margin-bottom: 4rem;
     padding: 1.3rem 7rem 1.3rem 2rem;
@@ -1037,6 +1039,7 @@ img {
   }
 }
 .projects__filter-form label,
+.military-glory__filter-form label,
 .search-result__filter-form label {
   font-size: 2.4rem;
   font-weight: 700;
@@ -1048,6 +1051,7 @@ img {
   cursor: pointer;
 }
 .projects__filter-form input[type=radio],
+.military-glory__filter-form input[type=radio],
 .search-result__filter-form input[type=radio] {
   position: absolute;
   overflow: hidden;
@@ -1062,11 +1066,13 @@ img {
           clip-path: inset(100%);
 }
 .projects__filter-form input[type=radio] + label,
+.military-glory__filter-form input[type=radio] + label,
 .search-result__filter-form input[type=radio] + label {
   width: 100%;
   position: relative;
 }
 .projects__filter-form input[type=radio]:checked + label,
+.military-glory__filter-form input[type=radio]:checked + label,
 .search-result__filter-form input[type=radio]:checked + label {
   border: 1px solid #78C680;
   background-color: #78C680;
@@ -5608,6 +5614,110 @@ img {
   background: url("../img/form/chevron-down.svg") no-repeat center;
   background-size: contain;
   z-index: 1;
+}
+.military-glory__filter-select {
+  display: block;
+}
+@media (min-width: 992px) {
+  .military-glory__filter-select {
+    display: none;
+  }
+}
+.military-glory__filter-radio-buttons {
+  display: none;
+}
+@media (min-width: 992px) {
+  .military-glory__filter-radio-buttons {
+    font-size: 20em;
+    line-height: 1.45;
+    font-weight: 600;
+    font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.46em;
+    margin-bottom: 4.9rem;
+  }
+}
+@media (min-width: 992px) and (min-width: 768px) {
+  .military-glory__filter-radio-buttons {
+    font-size: 2.4rem;
+  }
+}
+.military-glory__map {
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .military-glory__map {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .military-glory__map {
+    height: 750px;
+  }
+}
+.military-glory__legends .legends__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16em;
+  line-height: 1.45;
+  font-weight: 300;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1em;
+}
+@media (min-width: 768px) {
+  .military-glory__legends .legends__list {
+    font-size: 2.6rem;
+  }
+}
+.military-glory__legends .legends__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.military-glory__legends .legends__item .icon {
+  width: 1.25em;
+  height: 1.25em;
+}
+@media (min-width: 768px) {
+  .military-glory__legends .legends__item .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+.military-glory__legends .legends__item--red .icon__symbol {
+  fill: #BF2828;
+}
+.military-glory__legends .legends__item--yellow .icon__symbol {
+  fill: #BFA128;
+}
+.military-glory__legends .legends__item--blue .icon__symbol {
+  fill: #2885BF;
+}
+.military-glory__legends .legends__item--green .icon__symbol {
+  fill: #28BF67;
+}
+.military-glory__legends .legends__item--gray .icon__symbol {
+  fill: #A9A9A9;
 }
 .page__section--iamhere-banner {
   overflow: visible;
